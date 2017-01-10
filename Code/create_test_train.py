@@ -100,6 +100,8 @@ if __name__=="__main__":
     df = preproc(df)
     # Create training set with known labels
     train = df[df['evol_overall'] != 3]
+    plt.scatter(train['numax'], train['denv'], c=train['evol_overall'])
+    plt.show()
     # Create test set with unknown labels
     test = df[df['evol_overall'] == 3]
 
