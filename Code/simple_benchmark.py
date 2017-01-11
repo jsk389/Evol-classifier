@@ -193,9 +193,9 @@ if __name__=="__main__":
     plt.scatter(X_test['numax'].as_matrix()[misc][sel], X_test['Henv'].as_matrix()[misc][sel], c='r', s=80, marker='+')#c=Y_test[misc])#c='yellow')
     #plt.scatter(X_test['numax'].as_matrix()[misc][sel], X_test['denv'][misc].as_matrix()[sel], c='yellow', s=80, marker='+')
     plt.figure(3)
-    plt.scatter(X_train['numax'], np.exp(X_train['Henv'])*X_train['denv'], c=Y_train, s=80)
-    plt.scatter(X_test['numax'], np.exp(X_test['Henv'])*X_test['denv'], c=Y_test, s=80)
-    plt.scatter(X_test['numax'].as_matrix()[misc][sel], (np.exp(X_test['Henv'])*X_test['denv']).as_matrix()[misc][sel], c='r', s=80, marker='+')#c=Y_test[misc])#c='yellow')
+    plt.scatter(X_train['numax'], X_train['Henv'], c=Y_train, s=80)
+    plt.scatter(X_test['numax'], X_test['Henv'], c=Y_test, s=80)
+    plt.scatter(X_test['numax'].as_matrix()[misc][sel], X_test['Henv'].as_matrix()[misc][sel], c='r', s=80, marker='+')#c=Y_test[misc])#c='yellow')
     #plt.scatter(X_test['numax'].as_matrix()[misc][sel], X_test['denv'][misc].as_matrix()[sel], c='yellow', s=80, marker='+')
     plt.show()
 
